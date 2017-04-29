@@ -1,0 +1,7 @@
+nodes:
+  - hostname: master
+    ip: 192.168.51.4
+  - hostname: slave1
+    ip: 192.168.51.5
+  - hostname: slave2
+    ip: 192.168.51.6

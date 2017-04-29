@@ -1,0 +1,27 @@
+- name: Setup hadoop/spark master node
+  hosts: master
+  remote_user: hadoop
+  sudo: yes
+
+  roles:
+    - common
+    - oraclejava8
+    - master
+
+- name: Setup hadoop/spark data node
+  hosts: hadoop-data
+  remote_user: hadoop
+  sudo: yes
+
+  roles:
+    - common
+    - oraclejava8
+
+- name: Setup hadoop/spark data node
+    hosts: hadoop-data
+    remote_user: hadoop
+    sudo: yes
+
+    roles:
+      - common
+      - oraclejava8
