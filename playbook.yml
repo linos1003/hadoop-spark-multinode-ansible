@@ -1,27 +1,24 @@
+---
 - name: Setup hadoop/spark master node
-  hosts: master
+  hosts: debian-master
   remote_user: hadoop
-  sudo: yes
+  sudo: no
 
   roles:
-    - common
-    - oraclejava8
-    - master
+    - java8
 
 - name: Setup hadoop/spark data node
-  hosts: hadoop-data
+  hosts: debian-slave-1
   remote_user: hadoop
-  sudo: yes
+  sudo: no
 
   roles:
-    - common
-    - oraclejava8
+    - java8
 
 - name: Setup hadoop/spark data node
-    hosts: hadoop-data
-    remote_user: hadoop
-    sudo: yes
+  hosts: debian-slave-2
+  remote_user: hadoop
+  sudo: no
 
-    roles:
-      - common
-      - oraclejava8
+  roles:
+    - java8
