@@ -17,6 +17,11 @@
     - name: Accept Oracle license
       debconf: name="{{oracle_installer_key}}" question='shared/{{oracle_license_key}}' value='true' vtype='select'
 
+    - name: check if "java_sdk" target exists
+      stat: path=/usr/lib/jvm/java
+      register: filecheck
+
     - name: Install packages
       apt: name={{item}} state=present update_cache=yes
+      when: filecheck.stat.exists == False
       with_items: '{{ oracle_packages }}'

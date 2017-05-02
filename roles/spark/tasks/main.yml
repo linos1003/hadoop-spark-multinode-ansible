@@ -1,4 +1,12 @@
 ---
 # Download apache spark for each node
+- stat:
+    path: /home/hadoop/Downloads/spark.tar.gz
+  register: st
 - name: Download Spark
   get_url: url={{ spark_download_url }} dest=/home/hadoop/Downloads/spark.tar.gz
+  when:  st.stat.exists == False
+
+- name: untar spark tgz
+  shell: tar -xzf  /home/hadoop/Downloads/spark.tar.gz -C /home/hadoop/
+

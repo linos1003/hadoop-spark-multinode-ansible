@@ -5,27 +5,28 @@
   sudo: yes
 
   roles:
-#    - java8
-#    - spark
+    - java8
+    - spark
     - common
-#    - scala
+    - master
+    - scala
 
-- name: Setup hadoop/spark data node
+- name: Setup hadoop/spark data node 1
   hosts: debian-slave-1
   remote_user: hadoop
   sudo: yes
 
   roles:
-#    - java8
-#    - spark
+    - java8
+    - spark
     - common
 
-- name: Setup hadoop/spark data node
+- name: Setup hadoop/spark data node 2
   hosts: debian-slave-2
   remote_user: hadoop
   sudo: yes
 
   roles:
- #   - java8
-  #  - spark
+    - java8
+    - spark
     - common

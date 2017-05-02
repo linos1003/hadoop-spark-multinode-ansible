@@ -1,0 +1,14 @@
+---
+- name: copy slaves config
+  copy:
+    src: ./roles/master/files/slaves
+    dest: /home/hadoop/spark-2.1.0-bin-hadoop2.7/conf/
+    owner: hadoop
+    group: hadoop
+
+- name: copy saprk-env.sh to sparkhome
+  copy:
+    src: ./roles/master/files/spark-env.sh
+    dest: /home/hadoop/spark-2.1.0-bin-hadoop2.7/conf/
+    owner: hadoop
+    group: hadoop

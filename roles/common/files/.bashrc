@@ -114,5 +114,5 @@ fi
 
 # Alias java home
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-export SPARK_HOME=/home/hadoop/spark-home/
+export SPARK_HOME=/home/hadoop/spark-2.1.0-bin-hadoop2.7/
 export PATH=$PATH:$SPARK_HOME/bin

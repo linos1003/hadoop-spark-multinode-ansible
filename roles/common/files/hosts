@@ -6,6 +6,6 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
 # vm hosts
-192.168.1.22	debian-master
-192.168.1.20	debian-slave-1
+192.168.1.16	debian-master
+192.168.1.15	debian-slave-1
 192.168.1.14	debian-slave-2
