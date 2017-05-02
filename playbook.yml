@@ -8,7 +8,7 @@
 #    - java8
 #    - spark
     - common
-    - scala
+#    - scala
 
 - name: Setup hadoop/spark data node
   hosts: debian-slave-1

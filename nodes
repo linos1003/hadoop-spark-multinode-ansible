@@ -4,4 +4,4 @@ nodes:
   - hostname: debian-slave-1
     ip: 192.168.1.20
   - hostname: debian-slave-2
-    ip: 192.168.1.16
+    ip: 192.168.1.14

@@ -1,7 +1,48 @@
 ---
-- copy:
+- name: copy hosts file
+  copy:
     src: ./roles/common/files/hosts
     dest: /etc/hosts
     owner: hadoop
     group: hadoop
     mode: 0600
+
+- name: copy private_key
+  copy:
+    src: ./roles/common/files/id_rsa_vm
+    dest: /home/hadoop/.ssh/id_rsa_vm
+    owner: hadoop
+    group: hadoop
+    mode: 0600
+
+- name: copy authorized_keys
+  copy:
+    src: ./roles/common/files/authorized_keys
+    dest: /home/hadoop/.ssh/authorized_keys
+    owner: hadoop
+    group: hadoop
+    mode: 0600
+
+- name: copy ssh config
+  copy:
+    src: ./roles/common/files/ssh_config
+    dest: /home/hadoop/.ssh/config
+    owner: hadoop
+    group: hadoop
+    mode: 0600
+
+- name: copy custom bashrc
+  copy:
+    src: ./roles/common/files/.bashrc
+    dest: /home/hadoop/.bashrc
+    owner: hadoop
+    group: hadoop
+
+- name:  reload bashrc
+  shell: source /home/hadoop/.bashrc executable=/bin/bash
+
+- name:  execute ssh agent
+  shell: eval "$(ssh-agent -s)" &&  ssh-add /home/hadoop/.ssh/id_rsa_vm
+
+
+
