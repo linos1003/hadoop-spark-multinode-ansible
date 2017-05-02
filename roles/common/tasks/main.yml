@@ -1,0 +1,7 @@
+---
+- copy:
+    src: ./roles/common/files/hosts
+    dest: /etc/hosts
+    owner: hadoop
+    group: hadoop
+    mode: 0600
