@@ -1,0 +1,4 @@
+---
+# Download apache spark for each node
+- name: Download Spark
+  get_url: url={{ spark_download_url }} dest=/home/hadoop/Downloads/spark.tar.gz

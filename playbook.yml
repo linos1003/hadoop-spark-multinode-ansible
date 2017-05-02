@@ -6,6 +6,7 @@
 
   roles:
     - java8
+    - spark
 
 - name: Setup hadoop/spark data node
   hosts: debian-slave-1
@@ -14,6 +15,7 @@
 
   roles:
     - java8
+    - spark
 
 - name: Setup hadoop/spark data node
   hosts: debian-slave-2
@@ -22,3 +24,4 @@
 
   roles:
     - java8
+    - spark
