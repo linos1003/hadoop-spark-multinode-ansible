@@ -2,7 +2,7 @@
 - name: Setup hadoop/spark master node
   hosts: debian-master
   remote_user: hadoop
-  sudo: no
+  sudo: yes
 
   roles:
     - java8
@@ -10,7 +10,7 @@
 - name: Setup hadoop/spark data node
   hosts: debian-slave-1
   remote_user: hadoop
-  sudo: no
+  sudo: yes
 
   roles:
     - java8
@@ -18,7 +18,7 @@
 - name: Setup hadoop/spark data node
   hosts: debian-slave-2
   remote_user: hadoop
-  sudo: no
+  sudo: yes
 
   roles:
     - java8
