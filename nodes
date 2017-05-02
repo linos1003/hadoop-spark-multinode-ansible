@@ -1,7 +1,7 @@
 nodes:
   - hostname: debian-master
-    ip: 192.168.1.16
+    ip: 192.168.1.93
   - hostname: debian-slave-1
-    ip: 192.168.1.15
+    ip: 192.168.1.22
   - hostname: debian-slave-2
-    ip: 192.168.1.14
+    ip: 192.168.1.8

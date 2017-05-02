@@ -10,3 +10,11 @@
 - name: untar spark tgz
   shell: tar -xzf  /home/hadoop/Downloads/spark.tar.gz -C /home/hadoop/
 
+
+- name: copy saprk-env.sh to sparkhome
+  copy:
+    src: ./roles/master/files/spark-env.sh
+    dest: /home/hadoop/spark-2.1.0-bin-hadoop2.7/conf/
+    owner: hadoop
+    group: hadoop
+    mode: 777
