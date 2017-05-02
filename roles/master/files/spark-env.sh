@@ -68,6 +68,6 @@
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 export SPARK_WORKER_CORES=8
 
-export SPARK_WORKER_WEBUI_PORT="8080" 
+export SPARK_WORKER_WEBUI_PORT="8080"
 export SPARK_MASTER_HOST="debian-master"
 export SPARK_MASTER_IP="debian-master"

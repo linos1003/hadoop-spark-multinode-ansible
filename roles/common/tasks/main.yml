@@ -43,6 +43,14 @@
 
 - name:  execute ssh agent
   shell: eval "$(ssh-agent -s)" &&  ssh-add /home/hadoop/.ssh/id_rsa_vm
+- name: chmod to  /home/hadoop/spark-2.1.0-bin-hadoop2.7/bin/
+  file:
+    path:  /home/hadoop/spark-2.1.0-bin-hadoop2.7/bin/
+    state: directory
+    owner: hadoop
+    group: hadoop
+    mode: 0755
+
 
 
 
