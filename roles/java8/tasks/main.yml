@@ -1,3 +1,7 @@
+    - name: check if "java_sdk" target exists
+      stat: path=/usr/lib/jvm/java-8-oracle
+      register: filecheck
+
     - name: Setup oracle java deb repo
       apt_repository: repo="ppa:webupd8team/java" update_cache=yes
       when: ansible_distribution in [ 'Ubuntu' ]
@@ -16,10 +20,7 @@
 
     - name: Accept Oracle license
       debconf: name="{{oracle_installer_key}}" question='shared/{{oracle_license_key}}' value='true' vtype='select'
-
-    - name: check if "java_sdk" target exists
-      stat: path=/usr/lib/jvm/java
-      register: filecheck
+      when: filecheck.stat.exists == False
 
     - name: Install packages
       apt: name={{item}} state=present update_cache=yes

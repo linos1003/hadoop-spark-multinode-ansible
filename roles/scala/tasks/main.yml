@@ -1,5 +1,10 @@
+- name: check if "scala"   exists
+  stat: path=/usr/bin/scala
+  register: filecheck
+
 - name: Install packages
   apt:
     name: scala
     state:  present
     update_cache: yes
+  when: filecheck.stat.exists == False
