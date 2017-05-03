@@ -11,7 +11,6 @@ ff02::2 ip6-allrouters
 192.168.1.8	debian-slave-2
 
 # vm hosts smarto
-# vm hosts smarto
 192.168.1.15	debian-master
 192.168.1.48	debian-slave-1
 192.168.1.43	debian-slave-2
