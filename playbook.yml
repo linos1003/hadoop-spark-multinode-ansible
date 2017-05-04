@@ -1,15 +1,4 @@
 ---
-- name: Setup hadoop/spark master node
-  hosts: debian-master
-  remote_user: hadoop
-  sudo: yes
-
-  roles:
-    - java8
-    - spark
-    - common
-    - master
-    - scala
 
 - name: Setup hadoop/spark data node 1
   hosts: debian-slave-1
@@ -30,3 +19,22 @@
     - java8
     - spark
     - common
+
+- name: Setup hadoop/spark master node
+  hosts: debian-master
+  remote_user: hadoop
+  sudo: yes
+
+  roles:
+    - java8
+    - spark
+    - common
+    - master
+    - scala
+
+- name: Setup hadoop/spark master node
+  hosts: debian-master
+  remote_user: hadoop
+
+  roles:
+    - service

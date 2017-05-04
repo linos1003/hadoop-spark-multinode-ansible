@@ -12,3 +12,4 @@
     dest: /home/hadoop/spark-2.1.0-bin-hadoop2.7/conf/
     owner: hadoop
     group: hadoop
+
